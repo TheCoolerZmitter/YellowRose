@@ -1,0 +1,10 @@
+﻿  PluginProcessor.cpp
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(85,55): warning C4100: 'index': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(89,66): warning C4100: 'index': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(94,82): warning C4100: 'newName': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(94,55): warning C4100: 'index': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(99,70): warning C4100: 'samplesPerBlock': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(169,72): warning C4100: 'destData': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(176,75): warning C4100: 'sizeInBytes': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(176,65): warning C4100: 'data': unreferenced formal parameter
+  YellowRose_SharedCode.vcxproj -> C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\YellowRose.lib
