@@ -181,6 +181,8 @@ void YellowRoseAudioProcessor::setStateInformation (const void* data, int sizeIn
 
 void YellowRoseAudioProcessor::loadFile()
 {
+    mSampler.clearSounds();
+
     juce::FileChooser chooser{ "Please load a file" };
 
     if (chooser.browseForFileToOpen())
@@ -188,6 +190,23 @@ void YellowRoseAudioProcessor::loadFile()
         auto file = chooser.getResult();
         mFormatReader = mFormatManager.createReaderFor(file);
     }
+
+    juce::BigInteger range;
+    range.setRange(0, 127, true);
+    mSampler.addSound(new juce::SamplerSound("Sample", *mFormatReader, range, 60, 0, 0, 60));
+}
+
+void YellowRoseAudioProcessor::loadFile(const juce::String& path)
+{
+    mSampler.clearSounds();
+
+    auto file = juce::File(path);
+    mFormatReader = mFormatManager.createReaderFor(file);
+
+    auto sampleLength = static_cast<int>(mFormatReader->lengthInSamples);
+
+    mWaveForm.setSize(1, sampleLength);
+    mFormatReader->read(&mWaveForm, 0, sampleLength, 0, true, false);
 
     juce::BigInteger range;
     range.setRange(0, 127, true);
