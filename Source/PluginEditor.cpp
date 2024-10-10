@@ -9,12 +9,49 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
+void YellowRoseAudioProcessorEditor::makeSlider(juce::Slider& slider, juce::Label& label, const juce::String& labelText)
+{
+    slider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    slider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 40, 20);
+    slider.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::yellow);
+    slider.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::black);
+    slider.setRange(0.0f, 5.0f, 0.01);
+    label.setFont(10.0f);
+    label.setText(labelText, juce::NotificationType::dontSendNotification);
+    label.setJustificationType(juce::Justification::centredTop);
+    label.attachToComponent(&slider, false);
+}
+
 //==============================================================================
 YellowRoseAudioProcessorEditor::YellowRoseAudioProcessorEditor (YellowRoseAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
     mLoadButton.onClick = [&]() { audioProcessor.loadFile(); };
     addAndMakeVisible(mLoadButton);
+
+    makeSlider(mAttackSlider, mAttackLabel, "Attack");
+    addAndMakeVisible(mAttackSlider);
+    mAttackSlider.onValueChange = [this] {
+        audioProcessor.attack = mAttackSlider.getValue();\
+        };
+
+    makeSlider(mDecaySlider, mDecayLabel, "Decay");
+    addAndMakeVisible(mDecaySlider);
+    mDecaySlider.onValueChange = [this] {
+        audioProcessor.decay = mDecaySlider.getValue();
+        };
+
+    makeSlider(mSustainSlider, mSustainLabel, "Sustain");
+    addAndMakeVisible(mSustainSlider);
+    mSustainSlider.onValueChange = [this] {
+        audioProcessor.sustain = mSustainSlider.getValue();
+        };
+
+    makeSlider(mReleaseSlider, mReleaseLabel, "Release");
+    addAndMakeVisible(mReleaseSlider);
+    mReleaseSlider.onValueChange = [this] {
+        audioProcessor.release = mReleaseSlider.getValue();
+        };
     
     setSize(600, 200);
 }
@@ -81,9 +118,15 @@ void YellowRoseAudioProcessorEditor::resized()
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
 
-    //mLoadButton.setBounds(150, 100, 100, 100);
+    const auto startX = 0.6f;
+    const auto startY = 0.6f;
+    const auto dialWidth = 0.1f;
+    const auto dialHeight = 0.4f;
 
-
+    mAttackSlider.setBoundsRelative(startX, startY, dialWidth, dialHeight);
+    mDecaySlider.setBoundsRelative(startX + dialWidth, startY, dialWidth, dialHeight);
+    mSustainSlider.setBoundsRelative(startX + 2 * dialWidth, startY, dialWidth, dialHeight);
+    mReleaseSlider.setBoundsRelative(startX + 3 * dialWidth, startY, dialWidth, dialHeight);
 }
 
 bool YellowRoseAudioProcessorEditor::isInterestedInFileDrag(const juce::StringArray& files)

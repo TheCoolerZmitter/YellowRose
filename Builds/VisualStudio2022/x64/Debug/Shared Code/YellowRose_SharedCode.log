@@ -1,6 +1,20 @@
 ﻿  PluginEditor.cpp
-C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(52,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(57,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(100,94): warning C4100: 'y': unreferenced formal parameter
-C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(100,87): warning C4100: 'x': unreferenced formal parameter
+  PluginProcessor.cpp
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(19,19): warning C4996: 'juce::Font::Font': Use the constructor that takes a FontOptions argument
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(35,55): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(85,55): warning C4100: 'index': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(89,66): warning C4100: 'index': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(94,82): warning C4100: 'newName': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(94,55): warning C4100: 'index': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(99,70): warning C4100: 'samplesPerBlock': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(41,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(169,72): warning C4100: 'destData': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(47,57): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(176,75): warning C4100: 'sizeInBytes': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp(176,65): warning C4100: 'data': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(53,57): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(89,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(94,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(143,94): warning C4100: 'y': unreferenced formal parameter
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp(143,87): warning C4100: 'x': unreferenced formal parameter
   YellowRose_SharedCode.vcxproj -> C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\YellowRose.lib

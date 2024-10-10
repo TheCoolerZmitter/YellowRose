@@ -213,6 +213,10 @@ void YellowRoseAudioProcessor::loadFile(const juce::String& path)
     mSampler.addSound(new juce::SamplerSound("Sample", *mFormatReader, range, 60, 0, 0, 60));
 }
 
+void YellowRoseAudioProcessor::getADSRValue() {
+
+}
+
 //==============================================================================
 // This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
