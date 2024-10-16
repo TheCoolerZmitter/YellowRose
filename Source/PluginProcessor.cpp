@@ -19,10 +19,11 @@ YellowRoseAudioProcessor::YellowRoseAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ), mAPVTS(*this, nullptr, "PARAMETERS", createParameters())
 #endif
 {
     mFormatManager.registerBasicFormats();
+    mAPVTS.state.addListener(this);
 
     for (int i = 0; i < mNumVoices; i++) {
         mSampler.addVoice(new juce::SamplerVoice());
@@ -102,6 +103,7 @@ void YellowRoseAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
     // initialisation that you need..
 
     mSampler.setCurrentPlaybackSampleRate(sampleRate);
+    updateADSR();
 }
 
 void YellowRoseAudioProcessor::releaseResources()
@@ -142,14 +144,13 @@ void YellowRoseAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
+
+    if (mShouldUpdate) {
+        updateADSR();
+        mShouldUpdate = false;
+    }
 
     mSampler.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }
@@ -194,6 +195,8 @@ void YellowRoseAudioProcessor::loadFile()
     juce::BigInteger range;
     range.setRange(0, 127, true);
     mSampler.addSound(new juce::SamplerSound("Sample", *mFormatReader, range, 60, 0, 0, 60));
+
+    updateADSR();
 }
 
 void YellowRoseAudioProcessor::loadFile(const juce::String& path)
@@ -213,8 +216,32 @@ void YellowRoseAudioProcessor::loadFile(const juce::String& path)
     mSampler.addSound(new juce::SamplerSound("Sample", *mFormatReader, range, 60, 0, 0, 60));
 }
 
-void YellowRoseAudioProcessor::getADSRValue() {
+void YellowRoseAudioProcessor::updateADSR() {
+    mADSRparams.attack = mAPVTS.getRawParameterValue("ATTACK")->load();
+    mADSRparams.decay = mAPVTS.getRawParameterValue("DECAY")->load();
+    mADSRparams.sustain = mAPVTS.getRawParameterValue("SUSTAIN")->load();
+    mADSRparams.release = mAPVTS.getRawParameterValue("RELEASE")->load();
 
+    for (int i = 0; i < mSampler.getNumSounds(); i++) {
+        if (auto sound = dynamic_cast<juce::SamplerSound*>(mSampler.getSound(i).get())) {
+            sound->setEnvelopeParameters(mADSRparams);
+        }
+    }
+}
+
+juce::AudioProcessorValueTreeState::ParameterLayout YellowRoseAudioProcessor::createParameters() {
+    std::vector<std::unique_ptr<juce::RangedAudioParameter>> parameters;
+
+    parameters.push_back(std::make_unique < juce::AudioParameterFloat > ("ATTACK", "Attack", 0.0f, 10.0f, 0.0f));
+    parameters.push_back(std::make_unique < juce::AudioParameterFloat > ("DECAY", "Decay", 0.0f, 10.0f, 1.0f));
+    parameters.push_back(std::make_unique < juce::AudioParameterFloat > ("SUSTAIN", "Sustain", 0.0f, 1.0f, 1.0f));
+    parameters.push_back(std::make_unique < juce::AudioParameterFloat > ("RELEASE", "Release", 0.0f, 5.0f, 0.5f));
+
+    return { parameters.begin(), parameters.end() };
+}
+
+void YellowRoseAudioProcessor::valueTreePropertyChanged(juce::ValueTree& treeWhosePropertyHasChanged, const juce::Identifier& property) {
+    mShouldUpdate = true;
 }
 
 //==============================================================================

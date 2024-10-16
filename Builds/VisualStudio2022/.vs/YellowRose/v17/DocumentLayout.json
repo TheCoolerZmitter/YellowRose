@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Builds\\VisualStudio2022\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7F0E700-44CC-485E-BB89-BE37C88D2820}|YellowRose_SharedCode.vcxproj|C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginEditor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7F0E700-44CC-485E-BB89-BE37C88D2820}|YellowRose_SharedCode.vcxproj|C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7F0E700-44CC-485E-BB89-BE37C88D2820}|YellowRose_SharedCode.vcxproj|C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginProcessor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7F0E700-44CC-485E-BB89-BE37C88D2820}|YellowRose_SharedCode.vcxproj|C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginProcessor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7F0E700-44CC-485E-BB89-BE37C88D2820}|YellowRose_SharedCode.vcxproj|C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginProcessor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7F0E700-44CC-485E-BB89-BE37C88D2820}|YellowRose_SharedCode.vcxproj|C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7F0E700-44CC-485E-BB89-BE37C88D2820}|YellowRose_SharedCode.vcxproj|C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginEditor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,56 +22,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PluginProcessor.cpp",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginProcessor.cpp",
               "RelativeDocumentMoniker": "..\\..\\Source\\PluginProcessor.cpp",
               "ToolTip": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginProcessor.cpp",
               "RelativeToolTip": "..\\..\\Source\\PluginProcessor.cpp",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAAANgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwFYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-03T00:00:39.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PluginProcessor.h",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginProcessor.h",
               "RelativeDocumentMoniker": "..\\..\\Source\\PluginProcessor.h",
               "ToolTip": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginProcessor.h",
               "RelativeToolTip": "..\\..\\Source\\PluginProcessor.h",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAD0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAE8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-03T00:00:40.332Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PluginEditor.cpp",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginEditor.cpp",
               "RelativeDocumentMoniker": "..\\..\\Source\\PluginEditor.cpp",
               "ToolTip": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginEditor.cpp",
               "RelativeToolTip": "..\\..\\Source\\PluginEditor.cpp",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAowIAAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-03T00:00:38.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PluginEditor.h",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginEditor.h",
               "RelativeDocumentMoniker": "..\\..\\Source\\PluginEditor.h",
               "ToolTip": "C:\\Users\\Michael\\Desktop\\Plugins\\JUCE\\MyPlugins\\YellowRose\\Source\\PluginEditor.h",
               "RelativeToolTip": "..\\..\\Source\\PluginEditor.h",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACgAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-03T00:00:39.086Z",
               "EditorCaption": ""

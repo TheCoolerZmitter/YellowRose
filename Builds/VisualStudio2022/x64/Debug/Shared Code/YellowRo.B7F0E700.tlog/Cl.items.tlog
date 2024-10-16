@@ -1,5 +1,7 @@
 C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginProcessor.cpp;C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\PluginProcessor.obj
 C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\PluginEditor.cpp;C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\PluginEditor.obj
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\ADSRComponent.cpp;C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\ADSRComponent.obj
+C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Source\WaveThumbnail.cpp;C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\WaveThumbnail.obj
 C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\JuceLibraryCode\include_juce_audio_basics.cpp;C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\include_juce_audio_basics.obj
 C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\JuceLibraryCode\include_juce_audio_devices.cpp;C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\include_juce_audio_devices.obj
 C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\JuceLibraryCode\include_juce_audio_formats.cpp;C:\Users\Michael\Desktop\Plugins\JUCE\MyPlugins\YellowRose\Builds\VisualStudio2022\x64\Debug\Shared Code\include_juce_audio_formats.obj

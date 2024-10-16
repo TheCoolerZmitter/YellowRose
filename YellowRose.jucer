@@ -13,6 +13,12 @@
       <FILE id="vwLUyC" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="xILSyB" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="KouedX" name="ADSRComponent.cpp" compile="1" resource="0"
+            file="Source/ADSRComponent.cpp"/>
+      <FILE id="ImhRXY" name="ADSRComponent.h" compile="0" resource="0" file="Source/ADSRComponent.h"/>
+      <FILE id="TxDtPu" name="WaveThumbnail.cpp" compile="1" resource="0"
+            file="Source/WaveThumbnail.cpp"/>
+      <FILE id="QzlIVr" name="WaveThumbnail.h" compile="0" resource="0" file="Source/WaveThumbnail.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>

@@ -13,7 +13,7 @@
 //==============================================================================
 /**
 */
-class YellowRoseAudioProcessor  : public juce::AudioProcessor
+class YellowRoseAudioProcessor  : public juce::AudioProcessor, public juce::ValueTree::Listener
 {
 public:
     //==============================================================================
@@ -59,16 +59,25 @@ public:
     int getNumSamplerSounds() { return mSampler.getNumSounds(); }
     juce::AudioBuffer<float>& getWaveForm() { return mWaveForm; }
 
-    void getADSRValue();
-    float attack{ 0.0 }, decay{ 0.0 }, sustain{ 0.0 }, release{ 0.0 };
+    void updateADSR();
+
+    juce::ADSR::Parameters& getADSRparams() { return mADSRparams; }
+    juce::AudioProcessorValueTreeState& getAPVTS() { return mAPVTS; }
 
 private:
     juce::Synthesiser mSampler;
     const int mNumVoices{ 3 };
     juce::AudioBuffer<float> mWaveForm;
 
+    juce::ADSR::Parameters mADSRparams;
+
     juce::AudioFormatManager mFormatManager;
     juce::AudioFormatReader* mFormatReader{ nullptr };
+
+    juce::AudioProcessorValueTreeState mAPVTS;
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameters();
+    void valueTreePropertyChanged(juce::ValueTree &treeWhosePropertyHasChanged, const juce::Identifier &property) override;
+    std::atomic<bool> mShouldUpdate{ false };
 
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (YellowRoseAudioProcessor)
